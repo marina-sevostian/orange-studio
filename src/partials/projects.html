@@ -13,7 +13,37 @@
       </h2>
       <button type="button" class="see-project-btn">See project</button>
     </div>
-    <div class="project-image"></div>
+    <div class="project-image">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/project/project-1@1x.jpg,
+            ./img/project/project-1@2x.jpg
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/project/project-1@1x.jpg,
+            ./img/project/project-1@2x.jpg
+          "
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/project/project-1-mob@1x.jpg,
+            ./img/project/project-1-mob@2x.jpg
+          "
+        />
+        <img
+          src="./img/about-us/about-us--pic-mob-1x.jpg"
+          alt="watch"
+          width="704"
+          height="532"
+        />
+      </picture>
+    </div>
   </div>
   <div class="swipe-projects">
     <button class="swipe-btn"></button>
