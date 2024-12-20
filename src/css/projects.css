@@ -1,4 +1,5 @@
 .projects-section {
+  padding: 32px 0px;
 }
 
 .section-name {
@@ -70,11 +71,18 @@
   padding: 14px;
   width: 52px;
   height: 52px;
+  display: flex;
+  align-items: center;
+  background-color: #1c1d20;
 }
 
 /* Medias */
 
 @media screen and (min-width: 768px) {
+  .projects-section {
+    padding: 48px 0px;
+  }
+
   .project-info {
     padding: 64px;
   }
@@ -94,6 +102,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .projects-section {
+    padding: 82px 0px;
+  }
+
   .info-image-container {
     display: flex;
     margin-bottom: 64px;
