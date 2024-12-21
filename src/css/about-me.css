@@ -1,7 +1,10 @@
 
-
+.about-me-section {
+    padding-bottom: 64px;
+}
 .content-box {
 min-width: 343px;
+padding-bottom: 64px;
 
 }
 
@@ -9,7 +12,7 @@ min-width: 343px;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-padding-bottom: 64px;
+
 }
 
 .orange-word {
@@ -23,21 +26,26 @@ padding-bottom: 64px;
 border-radius: 24px;
 background-color: #242527;
 padding-bottom: 16px;
+width: 100%;
+height: auto
 
-min-width: 343px;
-height: 500px;
+
 }
 
 .intro-text  {
-align-items: center;
+
 font-weight: 500;
 font-size: 24px;
 line-height: 117%;
 letter-spacing: -0.03em;
 text-transform: uppercase;
 color: #fafafa;
-padding: 32px 32px;
-width: 279px;
+
+padding-top: 32px;
+padding-left: 32px;
+padding-right: 32px;
+padding-bottom: 272px;
+width: 100%;
 }
 
 .about-img {
@@ -45,6 +53,83 @@ width: 279px;
     
 }
 
+
+
+
+ /* Accordion */
+
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  width: 100%;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  fill: #fafafa;
+  /* transition: background-color 0.3s ease; */
+}
+
+.accordion-title {
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
+}
+
+
+
+
+.accordion-item.open .accordion-icon svg {
+  transform: rotate(180deg);
+ 
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  /* transition: 0.3s ease; */
+width: 100%;
+
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: #fafafa;
+
+}
+
+.accordion-article {
+   padding-bottom: 32px; 
+   width: 100%;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 560px; 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .accordion-box {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   cursor: pointer;
@@ -59,8 +144,7 @@ letter-spacing: -0.02em;
 text-transform: uppercase;
 color: rgba(250, 250, 250, 0.4);
 padding-bottom: 8px;
-/* width: 100%;
-height: 100%; */
+
 }
 .ac-title-about {
       display: flex;
@@ -69,29 +153,14 @@ height: 100%; */
 }
 
 .accordion-text-line {
-/* text-align: ; */
+
 font-weight: 500;
 font-size: 16px;
 line-height: 150%;
 letter-spacing: -0.02em;
 color: #fafafa;
 padding-bottom: 32px;
-}
-
-
-
-/* .btn-ac-about {
- display: flex;
- justify-content: center;
- align-items: center;
-  background-color: transparent;
-border-color: #FFFFFF;
-
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 100px;
-padding: 10px;
-width: 40px;
-height: 40px;
-color: #FFFFFF;
-
 } */
+
+
+
