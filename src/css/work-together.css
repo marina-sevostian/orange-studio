@@ -60,7 +60,37 @@
   align-content: start;
   justify-content: centre;
 }
+.footer-form {
+}
+.footer-js-submit-form {
+}
+.footer-f {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Thin line by default */
+  outline: none;
+  background: none;
+  transition: border-bottom 0.3s ease-in-out;
+  /* transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) */
+}
 
+.form-input:focus {
+  border-bottom: 4px solid #ff6600; /* Линия становится толще и меняет цвет */
+}
+.visually-hidden {
+}
+
+.footer-submit-button {
+  background-color: #ff7f08;
+  border-radius: ;
+}
 .footer-address {
   display: block;
 }
