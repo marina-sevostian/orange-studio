@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuHeader = document.querySelector(".menu-header");
-    console.log(menuHeader);
-    
     const menuList = document.querySelector(".menu-list");
-    console.log(menuList);
     
     menuList.style.display = "none";
 
@@ -17,8 +14,6 @@ menuHeader.addEventListener("click", () => {
 
 });
 
-
-
 const menuLinks = document.querySelectorAll(".menu-list a");
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -26,9 +21,3 @@ menuLinks.forEach(link => {
     });
 });
 
-
-
-// const menuHeader = document.querySelector(".menu-header").addEventListener("click", function () {
-//     const menuList = document.querySelector(".menu-list");
-//     menuList.style.display = menuList.style.display === "none" ? "block" : "none";
-// })

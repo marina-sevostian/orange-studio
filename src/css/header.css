@@ -2,19 +2,15 @@
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   /* z-index: 10; */
-  top: 0;
+  top: 32px;
   left: 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* gap: 487px; */
-  gap: 475px;
-  padding-top: 32px;
+  gap: 487px;
 }
-
-
 
 .logo-header {
   display: flex;
@@ -25,9 +21,6 @@
   width: 172px;
   height: 80px;
 }
-
-
-.nav-top {}
 
 .menu-header {
   font-family: "Inter Tight", sans-serif;
@@ -47,7 +40,6 @@
 }
 
 .menu-list {
-  /* display: block; */
   text-align: center;
   margin-top: 10px;
   display: none;
@@ -58,13 +50,17 @@
   gap: 4px;
 }
 
+.link-desk {
+  margin-top: 4px;
+}
+
+
 .link-menu {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
   margin-top: 10px;
-  /* text-decoration-skip-ink: none; */
   color: #fafafa;
 }
 
