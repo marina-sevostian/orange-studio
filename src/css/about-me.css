@@ -1,63 +1,53 @@
 
 .about-me-section {
-    padding-bottom: 64px;
+  padding-bottom: 64px;
+  width: auto;
 }
 .content-box {
-min-width: 343px;
-padding-bottom: 64px;
-
-}
-
-.content-text {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 32px;
+  width: auto;
+  padding-left: 0px;
+  padding-bottom: 64px;
 }
+
 
 .orange-word {
-    color: #FF7F08;
+  color: #ff7f08;
 }
 .gray-word {
-    color: rgba(250, 250, 250, 0.4);;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .intro-box {
-border-radius: 24px;
-background-color: #242527;
-padding-bottom: 16px;
-width: 100%;
-height: auto
-
-
+  border-radius: 24px;
+  background-color: #242527;
+  padding-bottom: 16px;
+  width: 50%;
+ 
 }
 
-.intro-text  {
-
-font-weight: 500;
-font-size: 24px;
-line-height: 117%;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: #fafafa;
-
-padding-top: 32px;
-padding-left: 32px;
-padding-right: 32px;
-padding-bottom: 272px;
-width: 100%;
+.intro-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 272px;
+  width: auto;
 }
 
 .about-img {
-    border-radius: 24px;
-    
+  border-radius: 24px;
 }
 
-
-
-
- /* Accordion */
-
+/* Accordion */
 
 .accordion-trigger {
   display: flex;
@@ -66,101 +56,132 @@ width: 100%;
   background: none;
   border: none;
   width: 100%;
+  padding-left: 0px;
   padding-bottom: 12px;
   font-size: 1.2rem;
   cursor: pointer;
   outline: none;
   fill: #fafafa;
-  /* transition: background-color 0.3s ease; */
 }
 
 .accordion-title {
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-color: rgba(250, 250, 250, 0.4);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
 }
 
-
-
+.accordion-icon {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
 
 .accordion-item.open .accordion-icon svg {
   transform: rotate(180deg);
- 
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  /* transition: 0.3s ease; */
-width: 100%;
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.02em;
-color: #fafafa;
-
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  gap: 10px;
 }
 
 .accordion-article {
-   padding-bottom: 32px; 
-   width: 100%;
+  padding-bottom: 32px;
+  width: 100%;
 }
 
 .accordion-item.open .accordion-content {
-  max-height: 560px; 
- 
+  max-height: 560px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.accordion-box {
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  cursor: pointer;
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(250, 250, 250, 0.2);
+  margin: 16px 0;
+  border: none;
 }
-
-.ac-title-about h3 {
-
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-color: rgba(250, 250, 250, 0.4);
-padding-bottom: 8px;
-
-}
-.ac-title-about {
-      display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-text-line {
-
+.ac-article {
+  
 font-weight: 500;
 font-size: 16px;
 line-height: 150%;
 letter-spacing: -0.02em;
 color: #fafafa;
-padding-bottom: 32px;
-} */
+padding-bottom: 10px;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+ .about-me-section {
+width: auto;
+ }
+}
+
+@media screen and (min-width: 1440px) {
+/* desktop зміщує текст праворуч*/
+.accordion-content-right {
+  display: flex;
+  justify-content: flex-start; 
+  padding-left: 50%; 
+  flex-direction: column; 
+  padding-right: 311px;
+}
+.accordion-content {
+  padding-right: 68px;
+}
+  
+.content-box {
+  width: 100%;
+  flex-wrap: nowrap;
+  padding-bottom: 96px;
+}
+
+
+
+
+.intro-box {
+  border-radius: 24px;
+  background-color: #242527;
+padding-top: 64px;
+padding-left: 64px;
+padding-right: 64px;
+width: 680px;
+height: 700px;
+ 
+}
+.intro-text {
+width: 522px;
+height: 200px;
+font-size: 38px;
+line-height: 105%;
+
+
+}
+.about-img {
+  border-radius: 24px;
+
+width: 680px;
+height: 700px;
+}
+
+}
+
+
+
 
 
 
