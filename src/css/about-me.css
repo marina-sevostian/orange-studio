@@ -1,0 +1,166 @@
+
+.about-me-section {
+    padding-bottom: 64px;
+}
+.content-box {
+min-width: 343px;
+padding-bottom: 64px;
+
+}
+
+.content-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+.orange-word {
+    color: #FF7F08;
+}
+.gray-word {
+    color: rgba(250, 250, 250, 0.4);;
+}
+
+.intro-box {
+border-radius: 24px;
+background-color: #242527;
+padding-bottom: 16px;
+width: 100%;
+height: auto
+
+
+}
+
+.intro-text  {
+
+font-weight: 500;
+font-size: 24px;
+line-height: 117%;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+color: #fafafa;
+
+padding-top: 32px;
+padding-left: 32px;
+padding-right: 32px;
+padding-bottom: 272px;
+width: 100%;
+}
+
+.about-img {
+    border-radius: 24px;
+    
+}
+
+
+
+
+ /* Accordion */
+
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  width: 100%;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  fill: #fafafa;
+  /* transition: background-color 0.3s ease; */
+}
+
+.accordion-title {
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
+}
+
+
+
+
+.accordion-item.open .accordion-icon svg {
+  transform: rotate(180deg);
+ 
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  /* transition: 0.3s ease; */
+width: 100%;
+
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: #fafafa;
+
+}
+
+.accordion-article {
+   padding-bottom: 32px; 
+   width: 100%;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 560px; 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.accordion-box {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+}
+
+.ac-title-about h3 {
+
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
+padding-bottom: 8px;
+
+}
+.ac-title-about {
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-text-line {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: #fafafa;
+padding-bottom: 32px;
+} */
+
+
+

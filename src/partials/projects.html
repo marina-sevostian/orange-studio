@@ -1,4 +1,4 @@
-<section class="projects-section container">
+<section class="projects-section container" id="projects">
   <h3 class="section-name">PROJECTS</h3>
   <div class="info-image-container">
     <div class="project-info">
@@ -11,29 +11,33 @@
       <h2 class="project-title">
         Programming Across Borders: Ideas, Technologies, Innovations
       </h2>
-      <button type="button" class="see-project-btn">See project</button>
+      <a
+        href="https://github.com/marina-sevostian/orange-studio"
+        class="see-project-btn"
+        >See project</a
+      >
     </div>
     <div class="project-image">
       <picture>
         <source
           media="(min-width: 1440px)"
           srcset="
-            ./img/projects/project-1@1x.jpg,
-            ./img/projects/project-1@2x.jpg
+            ./img/projects/project-1@1x.jpg 1x,
+            ./img/projects/project-1@2x.jpg 2x
           "
         />
         <source
           media="(min-width: 768px)"
           srcset="
-            ./img/projects/project-1@1x.jpg,
-            ./img/projects/project-1@2x.jpg
+            ./img/projects/project-1@1x.jpg 1x,
+            ./img/projects/project-1@2x.jpg 2x
           "
         />
         <source
           media="(max-width: 767px)"
           srcset="
-            ./img/projects/project-1-mob@1x.jpg,
-            ./img/projects/project-1-mob@2x.jpg
+            ./img/projects/project-1-mob@1x.jpg 1x,
+            ./img/projects/project-1-mob@2x.jpg 2x
           "
         />
         <img
@@ -46,7 +50,15 @@
     </div>
   </div>
   <div class="swipe-projects">
-    <button class="swipe-btn"></button>
-    <button class="swipe-btn"></button>
+    <button class="swipe-btn left-swipe">
+      <svg class="projects-arrow-left" width="32" height="32">
+        <use href="./img/icons.svg#arrow-left"></use>
+      </svg>
+    </button>
+    <button class="swipe-btn right-swipe">
+      <svg class="projects-arrow-right" width="32" height="32">
+        <use href="./img/icons.svg#arrow-right"></use>
+      </svg>
+    </button>
   </div>
 </section>
