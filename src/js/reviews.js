@@ -1,72 +1,107 @@
+import axios from "axios";
 import Swiper from 'swiper';
 import 'swiper/css';
 
-// init Swiper:
 
-// const swiper = new Swiper('.wrapper', {
-//   loop: true,
-//   direction: 'horizontal',
-//   slidesPerView:4,
-// 	// grabCursor: true,
-// 	spaceBetween: 16,
+const swiper = new Swiper('.wrapper', {
+  loop: true,
+  direction: 'horizontal',
+  grabCursor: true,
+	spaceBetween: 16,
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-//  breakpoints: {
-// 	0: {
-// 		slidesPerView: 1
-// 	},
-// 	768: {
-// 		slidesPerView: 2
-// 	},
-// 	// 1024: {
-// 	// 	slidesPerView: 2
-// 	// },
+ breakpoints: {
+	0: {
+		slidesPerView: 1
+	},
+	768: {
+		slidesPerView: 2
+	},
+	// 1024: {
+	// 	slidesPerView: 2
+	// },
 
-// 	// 1200: {
-// 	// 	slidesPerView: 2
-// 	// },
+	// 1200: {
+	// 	slidesPerView: 2
+	// },
 
-// 	1440: {
-// 		slidesPerView: 4
-// 	}
-//  }
-// }
+	1440: {
+		slidesPerView: 4
+	}
+ }
+})
 
  const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews'
 
  const reviewsList = document.querySelector(".reviews-list")
 
- async function fetchReviews(url = BASE_URL, options = {}) {
-  const response = await fetch(url, options);
-   if (!response.ok) {
-     throw new Error(response.statusText);
-   }
-   return await response.json();
+ reviewsList.addEventListener("click", handleUpdate);
+ reviewsList.addEventListener("click", handleDelete);
+
+async function fetchReviews(url = BASE_URL, options = {}) {
+  const response = await axios(url, options);
+  return response.data;
 }
-fetchReviews(url = BASE_URL)
-  .then(data => 
-    reviewsList.insertAdjacentHTML('beforeend', createMarkup))
-  .catch(error => console.log(error))
-//   .finally(() => console.log("finally"))
 
 function createMarkup(arr) {
-  return arr.map(({_id, avatar_URL, name, author, review}) =>`
-    <ul class="reviews-list swiper-wrapper">
+  return arr.map(({_id, avatar_url, author, review}) =>`
       <li data-id="${_id}" class="reviews-item swiper-slide">
         <img class="avatar-image"
-          src="${avatar_URL}"
-          alt="${name}"
+          src="${avatar_url}"
+          alt="${author}"
           width="48"
         />
         <h3 class="reviews-subtitle">${author}</h3>
         <p class="reviews-text">${review}</p>
       </li>
-    </ul> ` 
+     ` 
     ).join("");
 }
 
+
+fetchReviews(BASE_URL)
+    .then(data => reviewsList.insertAdjacentHTML("beforeend", createMarkup(data)))
+    .catch(error => alert(error.message))
+
+async function handleUpdate(event) {
+  event.preventDefault();
+   
+      const parent = event.target.closest(".reviews-item");
+      const id = parent.dataset.id;
+      
+      try {
+          const data = await fetchReviews(`${BASE_URL}/${id}`, {
+              method: "GET",
+              data: {
+                  completed: event.target.checked
+              }
+          });
+  
+          event.target.checked = data.completed
+      } catch(error) {
+          alert(error.message);
+      }
+  }
+  async function handleDelete(event) {
+    if(!event.target.classList.contains(".swiper-button-next")) {
+        return;
+    }
+
+    const parent = event.target.closest(".reviews-item");
+    const id = parent.dataset.id;
+
+    try {
+        await fetchReviews(`${BASE_URL}/${id}`, {
+            method: "DELETE"
+        })
+
+        parent.remove();
+    } catch(error) {
+        console.log(error.message);
+    }
+}

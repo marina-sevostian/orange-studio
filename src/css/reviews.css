@@ -35,7 +35,6 @@
   border-radius: 20px;
   padding: 32px 24px;
   width: 343px;
-  /* height: 302px; */
   margin-bottom: 32px;
 }
 .reviews-content {
@@ -69,22 +68,34 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
+  display: flex;
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
+  align-items: center;
+  background-color: #1c1d20;;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   border: 1px solid #3b3b3b;
 }
-.arrow {
-  fill: #fafafa;
+.arrow-next {
+  stroke: #fafafa;
 }
-.arrow:hover {
-  fill: #3b3b3b;
+.arrow-next:focus,
+.arrow-next:hover {
+  stroke: #3b3b3b;
 }
+.arrow-prev {
+  stroke: #fafafa;
+}
+.arrow-prev:focus,
+.arrow-prev:hover {
+  stroke: #3b3b3b;
+} 
+
 @media screen and (min-width: 768px) {
   .reviews-section {
     padding: 48px 0;
