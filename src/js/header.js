@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(menuHeader);
     
     const menuList = document.querySelector(".menu-list");
-console.log(menuList);
+    console.log(menuList);
+    
+    menuList.style.display = "none";
 
 menuHeader.addEventListener("click", () => {
         if (menuList.style.display === "block") {
