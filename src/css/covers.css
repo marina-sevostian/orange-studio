@@ -30,9 +30,9 @@ body {
 }
 
 .marquee__line {
-  /* background-color: #ffdc00; */
-  /* background-color: rgba(); */
-  background-color: #ff7f08;
+  /* background-color: #ff7f08; */
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: transparent;
   flex-shrink: 0;
   margin-right: 10px;
   display: flex;
