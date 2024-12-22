@@ -5,6 +5,8 @@ import 'swiper/css/navigation';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
  //import 'swiper/css';
+ import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviewsList = document.querySelector(".reviews-list");
@@ -66,9 +68,14 @@ fetchReviews(BASE_URL)
     swiper.update(); 
   })
   .catch(error => {
-    reviewsList.innerHTML = "<p>Not found</p>";
-    alert(`Error: ${error.message}`);
-  });
+    iziToast.warning({
+      title: 'Caution',
+      message: 'Not found',
+      position: 'bottomRight',
+    });
+    console.error(error.message);
+    }
+  );
 
 //  button
 
