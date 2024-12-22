@@ -52,6 +52,11 @@
   display: inline-block;
 }
 
+.see-project-btn:focus,
+.see-project-btn:hover {
+  background-color: #f87903;
+}
+
 .project-image {
   background-color: #242527;
   margin-bottom: 32px;
@@ -75,6 +80,12 @@
   display: flex;
   align-items: center;
   background-color: #1c1d20;
+  stroke: #fafafa;
+}
+
+.swipe-btn:focus,
+.swipe-btn:hover {
+  stroke: #3b3b3b;
 }
 
 /* Medias */
