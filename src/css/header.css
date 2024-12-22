@@ -134,6 +134,16 @@
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button-header-mobile:hover {
+  background-color: #f87903;
+}
+
+.button-header-mobile:focus {
+  background-color: #f87903;
+}
+
+
+
 .text-btn-mob {
   font-weight: 500;
   font-size: 14px;
@@ -236,6 +246,14 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
+  }
+
+  .link-button:focus .text-btn {
+    background-color: #f87903;
+  }
+
+  .link-button:hover .text-btn {
+    background-color: #f87903;
   }
 }
 
