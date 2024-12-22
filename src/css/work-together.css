@@ -1,5 +1,6 @@
 .footer-section {
-  margin: 80px auto 168px;
+   margin: 80px auto 168px; 
+ 
   /* overflow: hidden; */
   display: flex;
   flex-direction: column;

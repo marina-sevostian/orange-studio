@@ -1,6 +1,10 @@
 import axios from "axios";
-import Swiper from 'swiper';
-import 'swiper/css';
+//import Swiper from 'swiper';
+import 'swiper/css/navigation';
+ import 'swiper/css/pagination';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+ //import 'swiper/css';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviewsList = document.querySelector(".reviews-list");
