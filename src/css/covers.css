@@ -114,6 +114,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .covers-section {
+    min-height: 960px;
     background-image: url(/img/covers/desk/covers-bg-desk@1x.png);
   }
 
@@ -123,5 +124,8 @@ body {
     .covers-section {
       background-image: url(/img/covers/desk/covers-bg-desk@2x.png);
     }
+  }
+  .covers-container {
+    min-height: 960px;
   }
 }
