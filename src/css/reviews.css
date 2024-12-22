@@ -42,14 +42,14 @@
 }
 .swiper-button {
   width: 160px;
-  height: 100px;
-  margin-top: 82px;
+  height: 74px;
+  margin-top: 32px;
 }
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  transform: translateY(380%); 
+  transform: translateY(150%); 
   background: none;
   border: none;
   font-size: 24px;
@@ -72,19 +72,14 @@
 
 .swiper-button-prev {
   margin-left: 270px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 30px;
 }
 .swiper-button-next {
   margin-right: 270px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 30px;
 }
-/* .swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
-  display: none;
-} */
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
