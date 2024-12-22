@@ -60,16 +60,12 @@ const swiper = new Swiper('.swiper', {
 
 fetchReviews(BASE_URL)
   .then(data => {
-    if (!data.length) {
-      reviewsList.innerHTML = "<p>Not found</p>";
-      return;
-    }
     reviewsList.insertAdjacentHTML("beforeend", createMarkup(data));
     swiper.update(); 
   })
   .catch(error => {
-    iziToast.warning({
-      title: 'Caution',
+    iziToast.error({
+      title: 'Error',
       message: 'Not found',
       position: 'bottomRight',
     });
