@@ -23,8 +23,6 @@
 
 /* ////////////////////////////////////////////////////// */
 
-
-
 .about-me-section {
   padding-top: 64px;
   padding-bottom: 64px;
@@ -115,8 +113,6 @@
   background-color: rgba(255, 169, 89, 0.1);
 }
 
-
-
 .icon-arrow {
   stroke: #fafafa;
 }
@@ -163,8 +159,8 @@
 
 @media screen and (min-width: 768px) {
   .about-me-section {
-  padding-bottom: 96px;
-}
+    padding-bottom: 96px;
+  }
 
   .intro-box {
     padding-top: 48px;
@@ -185,10 +181,9 @@
 
 @media screen and (min-width: 1440px) {
   .about-me-section {
-  padding-top: 96px;
-  padding-bottom: 164px;
- 
-}
+    padding-top: 96px;
+    padding-bottom: 164px;
+  }
   .content-box {
     width: auto;
     flex-wrap: nowrap;
@@ -227,132 +222,70 @@
 
 /* /////////////////////////////////////////////////////////////// */
 
-/* .my-swiper-container .swiper {
-  width: 100%;
-  height: 300px;
-}
-.my-swiper-container .swiper-slide {
+.swiper-about {
+  position: relative;
+  overflow: hidden;
+  width: 260px;
   height: 130px;
-  width: 130px;
+}
+.swiper-slide.about {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 14px;
   text-align: center;
   border: 2px solid #444;
   transition: transform 0.3s, background 0.3s;
-} 
+  min-height: 130px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
 
-.my-swiper-container .swiper-container {
-  height: 130px;
+  border-radius: 100%;
+  stroke-width: 1px;
+  stroke: rgba(250, 250, 250, 0.2);
 }
-.my-swiper-container .about-swiper {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 2px solid #444;
+.swiper-about-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 32px;
 }
-.my-swiper-container .swiper-slide-about-swiper {
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  border: 2px solid #444;
-  transition: transform 0.3s, background 0.3s;
+.swiper-button-next-2 {
+  margin-top: 51px;
+  margin-left: 55px;
 }
-.my-swiper-container .swiper-slide {
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  border: 2px solid #444;
-  transition: transform 0.3s, background 0.3s;
-} 
-
-
-
-
-.my-swiper-container .swiper {
-  width: 100%;
-  height: 130px;
-  padding: 20px 0;
-  grid-template-rows: 1fr 1fr 1fr;
+.swiper-slide-active {
+  background: #ff912c;
 }
- .my-swiper-container .swiper-wrapper {
-  width: 130px;
+@media screen and (min-width: 768px) {
+  .swiper-about {
+    width: 600px;
+    height: 200px;
+  }
+  .arrow-next-about {
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-next-2 {
+    margin-top: 80px;
+    margin-left: 64px;
+  }
+  .swiper-slide.about {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
 }
-.my-swiper-container .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  border: 2px solid #444;
-  transition: transform 0.3s, background 0.3s;
+@media screen and (min-width: 1440px) {
+  .swiper-about {
+    width: 1200px;
+    height: 200px;
+  }
+  .swiper-about-container {
+    padding: 0 32px;
+  }
+  .swiper-button-next-2 {
+    margin-left: 72px;
+  }
 }
-
-.my-swiper-container .swiper-slide:hover {
-  transform: scale(1.1);
-  background: #ff5252;
-}
-.my-swiper-container .swiper-button-next,
-.my-swiper-container .swiper-button-prev {
-  color: #fff;
-}
-
-.my-swiper-container .swiper-pagination-bullet {
-  background: #fff;
-} */
-
-/* Перебиваємо стилі Swiper */
-
-/* 
-.my-swiper-container .swiper-slide {
-  height: 130px;
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  border: 2px solid #444;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.my-swiper-container .swiper-slide-active {
-  background-color: rgba(255, 127, 8, 1); 
-  border: none; 
-}
-
-.my-swiper-container .swiper-button-prev,
-.my-swiper-container .swiper-button-next {
-  color: white; 
-  font-size: 20px;
-}
-
-.my-swiper-container .swiper-wrapper {
-  display: flex;
-  gap: 0; 
-} */
