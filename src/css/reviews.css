@@ -33,8 +33,7 @@
 
 .swiper-slide {
   flex-shrink: 0;
-  width: calc(100% / 4);
-  height: 343px;
+  min-height: 360px;
   text-align: start;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
@@ -44,12 +43,13 @@
 .swiper-button {
   width: 160px;
   height: 100px;
+  margin-top: 82px;
 }
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  transform: translateY(350%); 
+  transform: translateY(380%); 
   background: none;
   border: none;
   font-size: 24px;
@@ -57,7 +57,7 @@
   --swiper-theme-color: none;
   --swiper-navigation-size: 0;
   border: 1px solid rgba(250, 250, 250, 0.5);
-  border-radius: 100px;
+  border-radius: 100%;
   padding: 14px; 
   width: 52px;
   height: 52px;
@@ -71,26 +71,20 @@
 }
 
 .swiper-button-prev {
-  margin-left: 300px;
+  margin-left: 270px;
   margin-top: 30px;
-  margin-bottom: 10px;
-
+  margin-bottom: 30px;
 }
 .swiper-button-next {
-  margin-right: 300px;
+  margin-right: 270px;
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-.swiper-button-next.swiper-button-disabled,
+/* .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   display: none;
-}
+} */
 
-.swiper-button {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -129,33 +123,21 @@
   color: rgba(250, 250, 250, 0.6);
   text-align: start;
 }
-.arrow-next {
+.swiper-button-prev .arrow-prev, 
+.swiper-button-next .arrow-next {
   width: 32px;
   height: 32px;
-  stroke: #fafafa;
+  stroke: #fafafa; 
 }
-.arrow-next:focus,
-.arrow-next:hover {
-  stroke: #3b3b3b;
+.arrow-prev use,
+.arrow-next use {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
-.arrow-prev {
-  width: 32px;
-  height: 32px;
-  stroke: #fafafa;
-}
-.arrow-prev:focus,
-.arrow-prev:hover {
-  stroke: #3b3b3b;
-}
-.swiper-button-next::after {
-  content: \2192;
-  color: #fafafa;
-  font-size: 24px;
-}
-.swiper-button-prev::after {
-  content: \2190;
-  color: #fafafa;
-  font-size: 24px;
+.swiper-button-prev .arrow-prev:hover, 
+.swiper-button-next .arrow-next:hover {
+  stroke: #3b3b3b; 
 }
 @media screen and (min-width: 768px) {
   .reviews-section {
@@ -175,15 +157,17 @@
     flex-wrap: nowrap;
   }
   .swiper-slide {
-    width: 360px;
-    height: 343px;
+    width: calc(100% / 4);
+    /* width: 360px; */
+    min-height: 360px;
   }
   .reviews-text {
     font-size: 14px;
   }
   .swiper-button {
-    width: 180px;
-    height: 130px;
+    margin-top: 60px;
+    width: 160px;
+    height: 70px;
   }
   .swiper-button-prev {
     margin-left: 300px;
