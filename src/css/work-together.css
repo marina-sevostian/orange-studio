@@ -1,10 +1,29 @@
 .footer-section {
-   margin: 80px auto 168px; 
- 
-  /* overflow: hidden; */
+  margin: 0 auto;
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-section {
+    margin: 0 auto;
+    padding: 80px 0 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-section {
+    margin: 0 auto;
+    padding: 80px 164px 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
 }
 
 .footer-title-wrap {
@@ -12,7 +31,12 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 18px;
-  flex: 0 0 45%;
+  /* flex: 0 0 45%; */
+
+  margin-left: 0;
+  padding-left: 0;
+  align-self: flex-start; /* If inside a flex container, aligns it to the start */
+  width: auto;
 }
 .footer-img {
   display: inline-block;
@@ -44,6 +68,9 @@
   justify-content: centre;
 }
 .footer-form {
+  display: flex;
+  flex: 1;
+  width: 100%;
 }
 .footer-js-submit-form {
 }
@@ -56,7 +83,6 @@
   width: 100%;
 }
 .footer-form-input-wrap {
-  height: 66px;
 }
 .form-input {
   display: block;
@@ -109,10 +135,15 @@
 }
 
 .footer-address {
-  display: block;
+  display: flex;
+
+  margin-left: 0; /* Ensure no left margin */
+  padding-left: 0; /* Remove left padding, if any */
+  align-self: flex-start; /* If inside a flex container, aligns it to the start */
+  width: auto;
 }
 .footer-contact-info {
-  display: block;
+  display: inline-block;
 }
 .footer-contact-info-list {
   display: flex;
