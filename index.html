@@ -19,9 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/orange-studio/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/orange-studio/assets/vendor-Cwi6B_oy.js">
-    <link rel="stylesheet" crossorigin href="/orange-studio/assets/vendor-CWhC9Oe7.css">
-    <link rel="stylesheet" crossorigin href="/orange-studio/assets/index-BD0Ec7iw.css">
+    <link rel="modulepreload" crossorigin href="/orange-studio/assets/vendor-DKpS55W4.js">
+    <link rel="stylesheet" crossorigin href="/orange-studio/assets/vendor-BpnyrIta.css">
+    <link rel="stylesheet" crossorigin href="/orange-studio/assets/index-CajtGe1Y.css">
   </head>
   <body>
     <header>
@@ -1759,8 +1759,10 @@
           class="form-input"
           autocomplete="off"
           placeholder="clients@gmail.com"
-          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         />
+        <p class="check-succ visually-hidden">Succes!</p>
+        <p class="check-inv visually-hidden">Invalid email, try again</p>
       </div>
 
       <div class="footer-form-input-wrap">
@@ -1773,7 +1775,6 @@
           placeholder="comments"
         />
       </div>
-
       <div class="footer-form-input-wrap">
         <button class="footer-submit-button" type="submit">Send</button>
       </div>
@@ -1794,6 +1795,22 @@
         </li>
       </ul>
     </address>
+    <div data-modal class="modal-overlay">
+      <div class="modal">
+        <button data-modal-close class="close-modal" type="button">
+          <svg class="svg-close" width="12" height="12">
+            <use href="/orange-studio/assets/icons-DKWUO3m9.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="response-title">
+          Thank you for your interest in cooperation!
+        </h3>
+        <p class="response-message">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
