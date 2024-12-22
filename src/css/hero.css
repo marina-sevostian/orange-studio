@@ -51,7 +51,7 @@
   justify-content: center;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolition: 2dppx),
+  (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
   .hero {
     background-image: url(/img/hero/bg-hero-mob@2x.jpg);
@@ -88,7 +88,7 @@
     padding-top: 18px;
   }
   @media screen and (-webkit-min-device-pixel-ratio: 2),
-    (min-resolition: 2dppx),
+    (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
     .hero {
       background-image: url(/img/hero/bg-hero-tab@2x.jpg);
@@ -100,7 +100,7 @@
     background-image: url(/img/hero/bg-hero-desk@1x.jpg);
   }
   @media screen and (-webkit-min-device-pixel-ratio: 2),
-    (min-resolition: 2dppx),
+    (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
     .hero {
       background-image: url(/img/hero/bg-hero-desk@2x.jpg);
