@@ -154,7 +154,8 @@ form .footer-form-input-wrap:not(:last-child) {
   color: #fafafa;
   border: none;
   /* padding-top: 32px; */
-  margin-top: 16px;
+  /* margin-top: 16px; */
+  /* margin-bottom: 16px; */
   display: flex;
   justify-content: center;
   align-items: center;
