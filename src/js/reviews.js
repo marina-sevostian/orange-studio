@@ -36,7 +36,28 @@ function createMarkup(arr) {
 
 // Swiper
 
-const swiper = new Swiper('.swiper', {
+const prevButton = document.querySelector('.swiper-button-prev-rev');
+const nextButton = document.querySelector('.swiper-button-next-rev');
+let swiper;
+
+function updateButtons() {
+      
+  if (!swiper) return;
+
+  if (swiper.isBeginning) {
+    prevButton.setAttribute('disabled', 'true');
+  } else {
+    prevButton.removeAttribute('disabled');
+  }
+
+  if (swiper.isEnd) {
+    nextButton.setAttribute('disabled', 'true');
+  } else {
+    nextButton.removeAttribute('disabled');
+  }
+}
+
+  swiper = new Swiper('.swiper', {
   loop: false,
   direction: 'horizontal',
   simulateTouch: true,
@@ -51,6 +72,10 @@ const swiper = new Swiper('.swiper', {
   navigation: {
     nextEl: '.swiper-button-next-rev',
     prevEl: '.swiper-button-prev-rev',
+  },
+  on: {
+    slideChange: updateButtons,
+    init: updateButtons,
   },
   breakpoints: {
     768: { slidesPerView: 2 },
@@ -74,25 +99,3 @@ fetchReviews(BASE_URL)
     console.error(error.message);
   });
 
-//  button
-
-swiper.on('slideChange', () => {
-  const prevButton = document.querySelector('.swiper-button-prev-rev');
-  const nextButton = document.querySelector('.swiper-button-next-rev');
-
-  if (swiper.isBeginning) {
-    prevButton.disabled = true;
-    prevButton.classList.add('disabled');
-  } else {
-    prevButton.disabled = false;
-    prevButton.classList.remove('disabled');
-  }
-
-  if (swiper.isEnd) {
-    nextButton.disabled = true;
-    nextButton.classList.add('disabled');
-  } else {
-    nextButton.disabled = false;
-    nextButton.classList.remove('disabled');
-  }
-});
