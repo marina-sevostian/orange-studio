@@ -71,6 +71,8 @@
   }
   .hero-title {
     font-size: 90px;
+    display: flex;
+    justify-content: center;
   }
   .hero-container {
     padding: 0;
