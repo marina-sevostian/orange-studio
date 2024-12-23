@@ -125,6 +125,7 @@ form .footer-form-input-wrap:not(:last-child) {
 }
 
 .footer-form-input-wrap {
+  height: 66px;
 }
 .form-input {
   display: block;
@@ -291,10 +292,17 @@ form .footer-form-input-wrap:not(:last-child) {
 .modal-overlay:not(.is-open) .modal {
   transform: translate(-50%, -100%);
 }
-
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 64px;
+    width: 494px;
+    height: 246px;
+  }
+}
 .close-modal {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
   border: none;
   display: flex;
   justify-content: center;
@@ -321,6 +329,7 @@ form .footer-form-input-wrap:not(:last-child) {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa;
+  margin-bottom: 16px;
 }
 .response-message {
   font-size: 16px;
