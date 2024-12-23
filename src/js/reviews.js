@@ -1,10 +1,8 @@
 import axios from 'axios';
-//import Swiper from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-//import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -45,6 +43,7 @@ const swiper = new Swiper('.swiper', {
   grabCursor: true,
   spaceBetween: 16,
   slidesPerView: 1, // 375px
+  speed: 1000,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
