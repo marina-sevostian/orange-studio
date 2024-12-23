@@ -14,7 +14,8 @@ menuHeader.addEventListener("click", () => {
 
 const menuLinks = document.querySelectorAll(".menu-list a");
 menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
         menuList.style.display = 'none';
         const targetId = link.getAttribute("href").slice(1); // Отримуємо ID секції
         const targetSection = document.getElementById(targetId);
