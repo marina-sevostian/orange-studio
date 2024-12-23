@@ -26,12 +26,7 @@ async function handleSubmit(event) {
     invalidEmail.classList.remove('visually-hidden');
     form[0].style.borderBottom = '2px solid  #E74A3B';
     return;
-  } else {
-    invalidEmail.classList.add('visually-hidden');
-    validEmail.classList.remove('visually-hidden');
-    form[0].style.borderBottom = '2px solid  #3CBC81';
-  }
-  if (!comment) {
+  } else if (!comment) {
     iziToast.show({
       message: 'Please, fill the comments field.',
       backgroundColor: '#EF4040',
@@ -40,6 +35,10 @@ async function handleSubmit(event) {
       progressBarColor: '#FFBEBE',
     });
     return;
+  } else {
+    invalidEmail.classList.add('visually-hidden');
+    validEmail.classList.remove('visually-hidden');
+    form[0].style.borderBottom = '2px solid  #3CBC81';
   }
 
   try {
@@ -53,7 +52,7 @@ async function handleSubmit(event) {
     invalidEmail.classList.add('visually-hidden');
     title.textContent = `${dataUpdated.title}`;
     text.textContent = `${dataUpdated.message}`;
-    modal.classList.toggle('is-open');
+    modal.classList.add('is-open');
   } catch (error) {
     iziToast.show({
       message: error.message,
@@ -69,7 +68,14 @@ async function handleSubmit(event) {
   }
 }
 
-closeButton.addEventListener('click', handleClick);
 function handleClick(event) {
-  modal.classList.toggle('is-open');
+  if (
+    event.target.classList.contains('svg-close') ||
+    event.target.classList.contains('svg-use') ||
+    (event.currentTarget === modal && event.target === modal)
+  ) {
+    modal.classList.remove('is-open');
+  }
 }
+
+modal.addEventListener('click', handleClick);
