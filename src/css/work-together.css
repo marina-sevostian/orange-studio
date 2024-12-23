@@ -85,7 +85,7 @@
 .footer-title-list-it {
   display: flex;
   gap: 20px;
-  font-display: row;
+  /* font-display: row; */
   align-content: start;
   justify-content: centre;
 }
@@ -124,9 +124,9 @@ form .footer-form-input-wrap:not(:last-child) {
   width: 100%;
 }
 
-.footer-form-input-wrap {
+/* .footer-form-input-wrap {
   height: 66px;
-}
+} */
 .form-input {
   display: block;
   color: #fafafa;
@@ -201,7 +201,7 @@ form .footer-form-input-wrap:not(:last-child) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-display: auto;
+  /* font-display: auto; */
   gap: 8px;
   padding: 0;
   margin: 0;
