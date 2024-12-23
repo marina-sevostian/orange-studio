@@ -15,7 +15,16 @@ menuHeader.addEventListener("click", () => {
 const menuLinks = document.querySelectorAll(".menu-list a");
 menuLinks.forEach(link => {
     link.addEventListener("click", () => {
-    menuList.style.display = 'none';
+        menuList.style.display = 'none';
+        const targetId = link.getAttribute("href").slice(1); // Отримуємо ID секції
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
     });
 });
 });
@@ -38,4 +47,9 @@ mobileLinks.forEach(list => {
     list.addEventListener("click", () => {
     modal.classList.remove('is-open');
     })
+})
+
+const buttonOrder = document.querySelector(".button-header-mobile");
+buttonOrder.addEventListener("click", () => {
+    modal.classList.remove('is-open');
 })
