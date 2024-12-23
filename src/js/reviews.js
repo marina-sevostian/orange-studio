@@ -1,16 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 //import Swiper from 'swiper';
 import 'swiper/css/navigation';
- import 'swiper/css/pagination';
+import 'swiper/css/pagination';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
- //import 'swiper/css';
- import iziToast from 'izitoast';
+//import 'swiper/css';
+import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
-const reviewsList = document.querySelector(".reviews-list");
-
+const reviewsList = document.querySelector('.reviews-list');
 
 async function fetchReviews(url) {
   const response = await axios.get(url);
@@ -20,7 +19,9 @@ async function fetchReviews(url) {
 // ul
 
 function createMarkup(arr) {
-  return arr.map(({ _id, avatar_url, author, review }) => `
+  return arr
+    .map(
+      ({ _id, avatar_url, author, review }) => `
     <li data-id="${_id}" class="reviews-item swiper-slide">
       <img class="avatar-image" 
         src="${avatar_url}" 
@@ -30,7 +31,9 @@ function createMarkup(arr) {
       <h3 class="reviews-subtitle">${author}</h3>
       <p class="reviews-text">${review}</p>
     </li>
-  `).join("");
+  `
+    )
+    .join('');
 }
 
 // Swiper
@@ -47,8 +50,8 @@ const swiper = new Swiper('.swiper', {
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next-rev',
+    prevEl: '.swiper-button-prev-rev',
   },
   breakpoints: {
     768: { slidesPerView: 2 },
@@ -60,8 +63,8 @@ const swiper = new Swiper('.swiper', {
 
 fetchReviews(BASE_URL)
   .then(data => {
-    reviewsList.insertAdjacentHTML("beforeend", createMarkup(data));
-    swiper.update(); 
+    reviewsList.insertAdjacentHTML('beforeend', createMarkup(data));
+    swiper.update();
   })
   .catch(error => {
     iziToast.error({
@@ -70,8 +73,7 @@ fetchReviews(BASE_URL)
       position: 'bottomRight',
     });
     console.error(error.message);
-    }
-  );
+  });
 
 //  button
 
@@ -95,8 +97,3 @@ swiper.on('slideChange', () => {
     nextButton.classList.remove('disabled');
   }
 });
-
-
-
-
-
