@@ -1,46 +1,34 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const accordionItems = document.querySelectorAll('.accordion-item');
 
   accordionItems.forEach((item, index) => {
     const trigger = item.querySelector('.accordion-trigger');
-    const icon = item.querySelector('.accordion-icon');
-
-    // const svg = icon.querySelector('svg');
-
+    const content = item.querySelector('.accordion-content');
+   
     if (index === 0) {
       item.classList.add('open');
-      icon.classList.add('active');
-
-      // svg.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + 'px'; 
     }
 
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-
-      // закриваю (видаляю актив і опен)
       accordionItems.forEach(i => {
         i.classList.remove('open');
-        const iconToReset = i.querySelector('.accordion-icon');
-        const svgToReset = i.querySelector('.accordion-icon svg');
-        if (iconToReset) {
-          iconToReset.classList.remove('active');
-        }
-        // if (svgToReset) {
-        //   svgToReset.classList.remove('active');
-        // }
+        i.querySelector('.accordion-content').style.maxHeight = 0;
       });
-
-      // відкриваб
       if (!isOpen) {
         item.classList.add('open');
-        icon.classList.add('active');
-
-        // svg.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = 0;
       }
     });
   });
 });
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 import Swiper from 'swiper';
 import 'swiper/css';
@@ -49,11 +37,11 @@ import 'swiper/css/navigation';
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-about', {
-    // Конфігурація слайдера
-    slidesPerView: 2, // Кількість видимих слайдів
+   
+    slidesPerView: 2, 
     modules: [Navigation, Pagination],
     navigation: {
-      // nextEl: '.swiper-button-next',
+     
       nextEl: '.swiper-button-next-2',
     },
     loop: true,
@@ -63,22 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
       clickable: true,
     },
     keyboard: {
-      enabled: true, // Включити керування з клавіатури
+      enabled: true, 
       onlyInViewport: true,
     },
     mousewheel: true,
 
     loopFillGroupWithBlank: true,
     breakpoints: {
-      // коли ширина >= 640px
+     
       640: {
         slidesPerView: 2,
       },
-      // коли ширина >= 768px
+     
       768: {
         slidesPerView: 3,
       },
-      // коли ширина >= 1024px
+      
       1440: {
         slidesPerView: 6,
       },
