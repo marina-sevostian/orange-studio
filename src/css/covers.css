@@ -129,3 +129,7 @@ body {
     min-height: 960px;
   }
 }
+
+.paused {
+  animation-play-state: paused;
+}
