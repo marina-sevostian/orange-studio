@@ -123,9 +123,9 @@ form .footer-form-input-wrap:not(:last-child) {
   width: 100%;
 }
 
-/* .footer-form-input-wrap {
+.footer-form-input-wrap {
   height: 66px;
-} */
+}
 .form-input {
   display: block;
   color: #fafafa;
