@@ -1,23 +1,24 @@
-// const marqueeLine = document.querySelector('.marquee__line');
-// // const guard = document.querySelector('.js-guard');
-// const target = document.querySelector('#covers');
+const marqueeLine = document.querySelectorAll('.marquee__line');
+const targetSection = document.querySelector('#covers');
 
-// marqueeLine.slyle.animationPlayState = 'paused';
+marqueeLine.forEach(e => e.classList.add('paused'));
 
-// const options = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0,
-// };
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.25,
+};
 
-// observer.observe(target);
+const observer = new IntersectionObserver(pausedAnimation, options);
 
-// const observer = new IntersectionObserver(callback, options);
+function pausedAnimation(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      marqueeLine.forEach(e => e.classList.remove('paused'));
+    } else {
+      marqueeLine.forEach(e => e.classList.add('paused'));
+    }
+  });
+}
 
-// function callback(entries, observer) {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       marqueeLine.slyle.animationPlayState = 'running';
-//     }
-//   });
-// }
+observer.observe(targetSection);
