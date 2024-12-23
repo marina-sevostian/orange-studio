@@ -87,6 +87,15 @@
   cursor: default;
 }
 
+.swiper-projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide.projects {
+  padding: 0;
+  border: none;
+}
 /* Media */
 
 @media screen and (min-width: 768px) {
@@ -132,6 +141,7 @@
 
   .projects-info {
     border-radius: 24px 0 0 24px;
+    width: 688px;
   }
 
   .projects-image {
