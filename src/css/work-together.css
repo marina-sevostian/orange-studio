@@ -85,9 +85,9 @@
 .footer-title-list-it {
   display: flex;
   gap: 20px;
-  font-display: row;
+  /* font-display: row; */
   align-content: start;
-  justify-content: centre;
+  justify-content: center;
 }
 .footer-form {
   display: flex;
@@ -98,8 +98,7 @@
 form .footer-form-input-wrap:not(:last-child) {
   margin-bottom: 16px;
 }
-.footer-js-submit-form {
-}
+
 @media screen and (min-width: 768px) {
   .footer-section
     .footer-form.container
@@ -142,8 +141,6 @@ form .footer-form-input-wrap:not(:last-child) {
 
 .form-input:focus {
   border-bottom: 4px solid #ff7f08;
-}
-.visually-hidden {
 }
 
 .footer-submit-button {
@@ -201,7 +198,7 @@ form .footer-form-input-wrap:not(:last-child) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-display: auto;
+  /* font-display: auto; */
   gap: 8px;
   padding: 0;
   margin: 0;
