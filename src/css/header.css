@@ -1,6 +1,7 @@
 .header {
   position: relative;
   width: 100%;
+  margin: 0 auto;
 }
 
 .header-container {
@@ -9,13 +10,13 @@
   top: 32px;
   left: 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 80px;
   display: flex;
   flex-direction: row;
   gap: 143px;
-  margin: 0 auto;
-  z-index: 100;
+  padding-left: 16px;
+  /* max-width: 343px; */
 }
 
 .menu-content {
@@ -78,19 +79,20 @@
   pointer-events: auto;
 }
 
-.mobile-menu-container {
-  /* position: relative; */
-}
 
 .mobile-menu-close {
   width: 28px;
   height: 28px;
-  position: absolute;
+  position: relative;
   top: 32px;
   right: 16px;
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.close-menu {
+  position: absolute;
 }
 
 .menu-list-mobile {
@@ -187,6 +189,8 @@
     flex-direction: row;
     gap: 151px;
     height: 80px;
+    padding: 10;
+    /* max-width: 704px; */
   }
 
   .menu-header {
@@ -267,6 +271,7 @@
 @media screen and (min-width: 1440px) {
   .header-container {
     gap: 487px;
+    /* max-width: 1376px; */
   }
 
   .mobile-menu {
