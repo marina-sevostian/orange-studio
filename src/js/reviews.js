@@ -77,8 +77,8 @@ fetchReviews(BASE_URL)
 //  button
 
 swiper.on('slideChange', () => {
-  const prevButton = document.querySelector('.swiper-button-prev');
-  const nextButton = document.querySelector('.swiper-button-next');
+  const prevButton = document.querySelector('.swiper-button-prev-rev');
+  const nextButton = document.querySelector('.swiper-button-next-rev');
 
   if (swiper.isBeginning) {
     prevButton.disabled = true;
