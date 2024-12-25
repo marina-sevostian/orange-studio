@@ -85,9 +85,9 @@
 .footer-title-list-it {
   display: flex;
   gap: 20px;
-  font-display: row;
+  flex-direction: row;
   align-content: start;
-  justify-content: centre;
+  justify-content: center;
 }
 .footer-form {
   display: flex;
@@ -221,7 +221,6 @@ form .footer-form-input-wrap:not(:last-child) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-display: auto;
   gap: 8px;
   padding: 0;
   margin: 0;
