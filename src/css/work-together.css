@@ -85,9 +85,9 @@
 .footer-title-list-it {
   display: flex;
   gap: 20px;
-  /* font-display: row; */
+  flex-direction: row;
   align-content: start;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .footer-form {
   display: flex;
@@ -98,7 +98,8 @@
 form .footer-form-input-wrap:not(:last-child) {
   margin-bottom: 16px;
 }
-
+.footer-js-submit-form {
+}
 @media screen and (min-width: 768px) {
   .footer-section
     .footer-form.container
@@ -108,6 +109,7 @@ form .footer-form-input-wrap:not(:last-child) {
   }
   .footer-section .footer-form.container form.footer-f {
     flex-direction: row;
+    gap: 32px;
   }
   .footer-section .footer-form.container form.footer-f {
     display: flex;
@@ -124,7 +126,26 @@ form .footer-form-input-wrap:not(:last-child) {
 }
 
 .footer-form-input-wrap {
-  height: 66px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  form .footer-form-input-wrap:not(:last-child) {
+    width: 245px;
+  }
+  form .footer-form-input-wrap .form-input {
+    width: 245px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  form .footer-form-input-wrap:not(:last-child) {
+    width: 390px;
+  }
+  form .footer-form-input-wrap .form-input {
+    width: 390px;
+  }
+  .footer-form .footer-form-input-wrap:last-child {
+    padding-left: 54px;
+  }
 }
 .form-input {
   display: block;
@@ -142,6 +163,8 @@ form .footer-form-input-wrap:not(:last-child) {
 .form-input:focus {
   border-bottom: 4px solid #ff7f08;
 }
+.visually-hidden {
+}
 
 .footer-submit-button {
   background-color: #ff7f08;
@@ -154,8 +177,7 @@ form .footer-form-input-wrap:not(:last-child) {
   color: #fafafa;
   border: none;
   /* padding-top: 32px; */
-  /* margin-top: 16px; */
-  /* margin-bottom: 16px; */
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +221,6 @@ form .footer-form-input-wrap:not(:last-child) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* font-display: auto; */
   gap: 8px;
   padding: 0;
   margin: 0;
@@ -290,17 +311,10 @@ form .footer-form-input-wrap:not(:last-child) {
 .modal-overlay:not(.is-open) .modal {
   transform: translate(-50%, -100%);
 }
-@media screen and (min-width: 768px) {
-  .modal {
-    padding: 64px;
-    width: 494px;
-    height: 246px;
-  }
-}
+
 .close-modal {
-  width: 24px;
-  height: 24px;
-  padding: 0;
+  width: 22px;
+  height: 22px;
   border: none;
   display: flex;
   justify-content: center;
@@ -327,7 +341,6 @@ form .footer-form-input-wrap:not(:last-child) {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa;
-  margin-bottom: 16px;
 }
 .response-message {
   font-size: 16px;
