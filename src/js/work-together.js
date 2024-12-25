@@ -52,6 +52,11 @@ async function handleSubmit(event) {
     invalidEmail.classList.add('visually-hidden');
     title.textContent = `${dataUpdated.title}`;
     text.textContent = `${dataUpdated.message}`;
+
+    // Remove visually-hidden class to display the elements
+    title.classList.remove('visually-hidden');
+    text.classList.remove('visually-hidden');
+
     modal.classList.add('is-open');
   } catch (error) {
     iziToast.show({
@@ -61,6 +66,14 @@ async function handleSubmit(event) {
       position: 'topRight',
       progressBarColor: '#FFBEBE',
     });
+
+    title.textContent = 'Submission Failed';
+    text.textContent =
+      'There was an issue submitting your form. Please try again later.';
+
+    // Remove visually-hidden class to display the error message
+    title.classList.remove('visually-hidden');
+    text.classList.remove('visually-hidden');
   } finally {
     form.reset();
     form[0].style.borderBottom = '2px solid  #ccc';
