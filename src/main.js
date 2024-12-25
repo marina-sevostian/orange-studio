@@ -18,3 +18,17 @@ import 'accordion-js/dist/accordion.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+
+const scrollToTopButton = document.querySelector('#scrollToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopButton.style.display = 'flex';
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
