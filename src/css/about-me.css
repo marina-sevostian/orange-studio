@@ -218,10 +218,13 @@
 .swiper-about-container {
   display: flex;
   margin-top: 32px;
+  position: relative;
 }
 .swiper-button-next-2 {
+  position: absolute;
   margin-top: 51px;
-  margin-left: 55px;
+  /* margin-left: 55px; */
+  right: 0;
 }
 .swiper-slide.about.swiper-slide-active {
   background: #ff912c;
