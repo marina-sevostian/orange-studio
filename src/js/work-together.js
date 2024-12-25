@@ -62,10 +62,6 @@ async function handleSubmit(event) {
       position: 'topRight',
       progressBarColor: '#FFBEBE',
     });
-
-    title.textContent = 'Submission Failed';
-    text.textContent =
-      'There was an issue submitting your form. Please try again later.';
   } finally {
     form.reset();
     form[0].style.borderBottom = '2px solid  #ccc';
