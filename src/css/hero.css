@@ -4,10 +4,12 @@
   background-size: cover;
   padding-top: 281px;
 }
+
 .hero-container {
   align-items: center;
   padding-left: 16px;
   padding-right: 16px;
+  padding-bottom: 32px;
 }
 .hero-title {
   font-family: 'Inter Tight', sans-serif;
@@ -17,14 +19,14 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  padding-bottom: 212px;
+  margin-bottom: 212px;
 }
 .hero-socials {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 }
 .socials-name {
   font-weight: 500;
@@ -44,6 +46,8 @@
 }
 .hero-link {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .email-hero {
   border: 1px solid rgba(250, 250, 250, 0.2);
