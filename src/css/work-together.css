@@ -176,22 +176,20 @@ form .footer-form-input-wrap:not(:last-child) {
   letter-spacing: -0.02em;
   color: #fafafa;
   border: none;
-  /* padding-top: 32px; */
   margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     /* Smooth scaling */ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Smooth color transition */
 }
 
 @media screen and (min-width: 768px) {
-  .footer-submit-button {
+  #footer-form .footer-submit-button {
     width: 150px;
     height: 150px;
-    padding: 0;
+    margin-top: 0;
   }
 }
 
