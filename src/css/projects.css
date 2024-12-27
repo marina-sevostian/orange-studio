@@ -1,6 +1,5 @@
 .projects-section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
 }
 
 .projects-title {
@@ -100,8 +99,7 @@
 
 @media screen and (min-width: 768px) {
   .projects-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 96px;
   }
 
   .projects-info {
@@ -142,8 +140,7 @@
 
 @media screen and (min-width: 1440px) {
   .projects-section {
-    padding-top: 82px;
-    padding-bottom: 82px;
+    padding-bottom: 164px;
   }
 
   .projects-wrapper {
