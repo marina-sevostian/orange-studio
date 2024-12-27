@@ -101,8 +101,8 @@
 form .footer-form-input-wrap:not(:last-child) {
   margin-bottom: 16px;
 }
-.footer-js-submit-form {
-}
+/* .footer-js-submit-form {
+} */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer-f {
@@ -175,8 +175,8 @@ form .footer-form-input-wrap:not(:last-child) {
 .form-input:focus {
   border-bottom: 4px solid #ff7f08;
 }
-.visually-hidden {
-}
+/* .visually-hidden {
+} */
 
 .footer-submit-button {
   background-color: #ff7f08;
