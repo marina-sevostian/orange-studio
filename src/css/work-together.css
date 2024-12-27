@@ -112,7 +112,7 @@ form .footer-form-input-wrap:not(:last-child) {
     width: 100%;
   }
   .footer-form {
-    padding: 64px;
+    padding-bottom: 64px;
   }
 }
 
