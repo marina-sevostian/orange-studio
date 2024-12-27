@@ -17,7 +17,7 @@ menuLinks.forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
         menuList.style.display = 'none';
-        const targetId = link.getAttribute("href").slice(1); // Отримуємо ID секції
+        const targetId = link.getAttribute("href").slice(1);
         const targetSection = document.getElementById(targetId);
         
         if (targetSection) {
@@ -54,3 +54,18 @@ const buttonOrder = document.querySelector(".button-header-mobile");
 buttonOrder.addEventListener("click", () => {
     modal.classList.remove('is-open');
 })
+
+
+const textButton = document.querySelector(".text-btn")
+    textButton.addEventListener("click", e => {
+        e.preventDefault();
+        const targetId = textButton.getAttribute("href").slice(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    })
